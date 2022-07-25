@@ -1,6 +1,6 @@
 import React from "react"
 import './App.css';
-import user from "./images/user.png"
+import User from "./Components/UserImage";
 import Star from "./Components/Star";
 
 const App = () => {
@@ -34,7 +34,7 @@ const toggleFavorite = () => {
   return (
     <main>
     <article className="card">
-        <img src={user} className="card--image" />
+        <User/>
         <div className="card--info">
           
             <Star contact={contact} onClick={toggleFavorite}/>
