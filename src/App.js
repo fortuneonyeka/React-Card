@@ -11,6 +11,7 @@ const App = () => {
     phone: "+1 (719) 555-1212",
     email: "itsmyrealname@example.com",
     isFavorite: false,
+    isFavoriteImage: false,
   });
 
   const toggleFavorite = () => {
@@ -19,10 +20,16 @@ const App = () => {
       isFavorite: !prevContact.isFavorite,
     }));
   };
+  const toggleFavoriteImage = () => {
+    setContact((prevContact) => ({
+      ...prevContact,
+      isFavoriteImage: !prevContact.isFavoriteImage,
+    }));
+  };
   return (
     <main>
       <article className="card">
-        <User />
+        <User contact={contact} onClick={toggleFavoriteImage}/>
         <div className="card--info">
           <Star contact={contact} onClick={toggleFavorite} />
           <UserDetails details={contact} />
