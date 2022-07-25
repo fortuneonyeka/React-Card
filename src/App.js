@@ -3,6 +3,7 @@ import './App.css';
 import starEmpty from "./images/star-empty.png"
 import starFilled from "./images/star-filled.png"
 import user from "./images/user.png"
+import Star from "./Components/Star";
 
 const App = () => {
   const [contact, setContact] = React.useState({
@@ -37,11 +38,8 @@ const toggleFavorite = () => {
     <article className="card">
         <img src={user} className="card--image" />
         <div className="card--info">
-            <img 
-                src={`${starIcon}`} 
-                className="card--favorite"
-                onClick={toggleFavorite}
-            />
+          
+            <Star isFilled={starIcon} onClick={toggleFavorite}/>
             <h2 className="card--name">
                 {contact.firstName} {contact.lastName}
             </h2>
