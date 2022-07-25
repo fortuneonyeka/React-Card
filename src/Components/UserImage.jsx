@@ -1,10 +1,8 @@
-import React from 'react'
-import user from "../images/user.png"
+import React from "react";
+import user from "../images/user.png";
 
 const UserImage = () => {
-  return (
-    <img src={user} className="card--image" />
-  )
-}
+  return <img src={user} className="card--image" />;
+};
 
-export default UserImage
+export default UserImage;
