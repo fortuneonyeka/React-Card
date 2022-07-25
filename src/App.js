@@ -29,9 +29,9 @@ const App = () => {
   return (
     <main>
       <article className="card">
-        <User contact={contact} onClick={toggleFavoriteImage}/>
+        <User contact={contact} handleClick={toggleFavoriteImage}/>
         <div className="card--info">
-          <Star contact={contact} onClick={toggleFavorite} />
+          <Star contact={contact} handleClick={toggleFavorite} />
           <UserDetails details={contact} />
         </div>
       </article>
