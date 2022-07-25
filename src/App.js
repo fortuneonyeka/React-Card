@@ -1,7 +1,5 @@
 import React from "react"
 import './App.css';
-import starEmpty from "./images/star-empty.png"
-import starFilled from "./images/star-filled.png"
 import user from "./images/user.png"
 import Star from "./Components/Star";
 
@@ -25,7 +23,7 @@ const App = () => {
  *   `isFavorite` in state above.
  */
 
-let starIcon = contact.isFavorite ? starFilled : starEmpty
+
 
 const toggleFavorite = () => {
     setContact(prevContact => ({
@@ -39,7 +37,7 @@ const toggleFavorite = () => {
         <img src={user} className="card--image" />
         <div className="card--info">
           
-            <Star isFilled={starIcon} onClick={toggleFavorite}/>
+            <Star contact={contact} onClick={toggleFavorite}/>
             <h2 className="card--name">
                 {contact.firstName} {contact.lastName}
             </h2>
